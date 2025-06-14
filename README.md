@@ -122,7 +122,9 @@ Add `"exclude": ["src/electron"]` and create a seperate  tsconfig for electron
   "main": "dist-electron/main.js", // electron app entry point
   "scripts": {
     "dev:react": "vite", // running react
-    "dev:electron": "electron .", running electron
+    "dev:electron": "electron .", // running electron
+    // to skip sandboxing
+    //"dev:electron: : 'ELECTRON_DISABLE_SANDBOX=true electron .',
     "build": "tsc -b && vite build",
     "transpile:electron": "tsc -p src/electron/tsconfig.json", // converting ts to js
 
